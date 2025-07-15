@@ -12,17 +12,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: ✅ কোড ক্লোন
+      - name: ✅ কোড ক্লোন করো
         uses: actions/checkout@v3
 
-      - name: 🛠️ dist ফোল্ডার তৈরি ও ফাইল কপি
-         run: |
-          mkdir dist
-          shopt -s extglob
-          cp -r !(dist) dist/
-
-      - name: 🚀 GitHub Pages এ Publish
+      - name: 🚀 সরাসরি src ফোল্ডার থেকে Deploy করো
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.MY_DEPLOY_TOKEN }}
-          publish_dir: ./dist
+          personal_token: ${{ secrets.MY_DEPLOY_TOKEN }}
+          publish_dir: ./src
