@@ -16,10 +16,10 @@ jobs:
         uses: actions/checkout@v3
 
       - name: 🛠️ dist ফোল্ডার তৈরি ও ফাইল কপি
-        run: |
+         run: |
           mkdir dist
-          cp -r * dist/
-          rm -rf dist/.git dist/.github
+          shopt -s extglob
+          cp -r !(dist) dist/
 
       - name: 🚀 GitHub Pages এ Publish
         uses: peaceiris/actions-gh-pages@v3
