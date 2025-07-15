@@ -19,4 +19,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.MY_DEPLOY_TOKEN }}
-          publish_dir: ./src
+          publish_dir: ./
