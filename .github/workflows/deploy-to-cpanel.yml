@@ -20,4 +20,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.FTP_PORT }}
           server-dir: ${{ secrets.FTP_TARGET }}
-          local-dir: ./src   # যদি index.html src ফোল্ডারে থাকে
+          local-dir: ./cicd/
